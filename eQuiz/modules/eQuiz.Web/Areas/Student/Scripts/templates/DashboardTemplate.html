@@ -1,0 +1,36 @@
+﻿<div id='content' > <!--ng-hide="isSearching"-->
+    <table id='quizzesTable'>
+        <thead>
+            <tr>
+                <th><h2>Quizzes</h2></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="quiz in quizzes">
+                <td>
+                    {{quiz.Name}}
+                </td>
+                <td>
+                    {{quiz.StartDate}}
+                </td>
+                <td>
+                    {{quiz.TimeLimitMinutes}}
+                </td>
+                <td>
+                    <a href='#/quizInRun/{{quiz.Id}}/{{quiz.TimeLimitMinutes}}' ng-if="quiz.InternetAccess" ng-click="getQuestionById(quiz.Id)">Start{{quiz.Id}}</a>
+                    <div ng-if="!quiz.InternetAccess">Inactive</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <quiz-pager page="{{page}}" pages-count="{{pagesCount}}" total-count="{{totalCount}}" search-func="search(page)"></quiz-pager>
+    </div>
+</div>
+<div ng-hide="!isSearching">
+    <div class="progress progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</div>

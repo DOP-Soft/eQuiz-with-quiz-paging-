@@ -1,0 +1,142 @@
+﻿
+h1 {
+    font-family: sans-serif;
+}
+
+#details table {
+    position: fixed;
+    top: 30%;
+    left: 40%;
+    border-collapse: separate;
+    border-spacing: 0 1em;
+}
+
+#details table td {
+    text-align: left;
+}
+
+select {
+    border-radius: 4px;
+    width: 172px;
+}
+
+input[type='text'], select {
+    border: 2px solid black;
+}
+
+#saveDetailsBtn {
+    border: 2px solid black;
+    width: 110px;
+    border-radius: 4px;
+}
+
+
+
+
+#headerTable {
+    table-layout: fixed;
+    width: 100%;
+}
+
+    #headerTable #User_group_td {
+        text-align: right;
+    }
+
+#quizzesTable {
+    border-collapse: separate;
+    border-spacing: 0 1em;
+    border-spacing: 10px;
+}
+
+#content {
+    margin-top: 2%;
+}
+#quizButtons {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+
+footer table {
+    float: right;
+    margin-right: 10%;
+}
+
+.empty {
+    width: 25px;
+}
+input[type="button"] {
+     width: 100px;   
+}
+#questAndAnswer{
+    margin-left: 10%;  
+}
+#questAndAnswer ul li{
+    list-style: none;
+}
+
+#timer{
+    text-align: center;
+    font-size: 20pt;
+}
+#quizNav{
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#quizNav table{
+    /*width: 100%;*/
+    margin:auto;
+}
+
+.navQuestions{
+    border:1px solid black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left:100px;
+    margin-right:100px;
+}
+
+.emptyTdInQuestNav{
+    width:auto;
+    height:auto;
+}
+
+#timer{
+    text-align:center;
+}
+#timerContainer{
+    text-align:center;
+}
+
+/*Pagination*/
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {
+    display: inline;
+}
+
+ul.pagination li a {
+color: black;
+float: left;
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+}
+
+ul.pagination li a.active {
+    background-color: #7a7e6e;
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+}

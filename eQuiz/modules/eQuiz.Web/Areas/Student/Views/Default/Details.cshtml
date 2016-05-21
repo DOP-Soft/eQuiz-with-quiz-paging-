@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section HeadStyles{
+    <link rel="stylesheet" href="~/Areas/Student/Styles/equiz-temp.css">
+}
+
+<div id='details'>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <h3>Student Details</h3>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>First name</td>
+                <td>
+                    <input type="text" id='firstName_txt'>
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    <input type="text" id='lastName_txt'>
+                </td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>
+                    <input type="text" id='phone_txt'>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="text" id='email_txt'>
+                </td>
+            </tr>
+            <tr>
+                <td>User group</td>
+                <td>
+                    <select id='userGroup_txt'></select>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href='@Url.Action("Dashboard", "Default")'><input type="button" value="Save" id="saveDetailsBtn"></a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

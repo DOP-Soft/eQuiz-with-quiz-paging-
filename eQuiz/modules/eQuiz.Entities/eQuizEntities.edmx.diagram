@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0b635835e46d46fb8a280aaf6c27e7cf" Name="Diagram1">
+        <EntityTypeShape EntityType="eQuizModel.FacebookUser" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.Question" Width="1.5" PointX="6" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuestionAnswer" Width="1.5" PointX="8.25" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuestionTag" Width="1.5" PointX="8.25" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuestionType" Width="1.5" PointX="3.75" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.Quiz" Width="1.5" PointX="3.75" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizBlock" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizPass" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizPassQuestion" Width="1.5" PointX="8.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizPassScore" Width="1.5" PointX="3" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizQuestion" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizType" Width="1.5" PointX="1.5" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.QuizVariant" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.Tag" Width="1.5" PointX="6" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.Topic" Width="1.5" PointX="3.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.User" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.UserAnswer" Width="1.5" PointX="10.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.UserAnswerScore" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.UserGroup" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="eQuizModel.UserToUserGroup" Width="1.5" PointX="6" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="eQuizModel.FK_tblFacebookUser_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuestion_tblQuestionType" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuestion_tblTopic" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuestionAnswer_tblQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuestionTag_tblQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPassQuestion_tblQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblUserAnswer_tblQuestionAnswer" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuestionTag_tblTag" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuiz_tblGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuiz_tblQuizType" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizBlock_tblQuiz" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPass_tblQuiz" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizBlock_Topic" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPassQuestion_QuizBlock" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizQuestion_tblQuizBlock" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPass_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPassQuestion_tblQuizPass" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblUserAnswer_tblQuizPassQuestion" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizPassScore_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblUserAnswerScore_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblUserToUserGroup_tblUser" ManuallyRouted="false" />
+        <AssociationConnector Association="eQuizModel.FK_tblUserToUserGroup_tblUserGroup" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="eQuizModel.UserTextAnswer" Width="1.5" PointX="6.375" PointY="0.75" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizQuestion_tblQuestion" />
+        <AssociationConnector Association="eQuizModel.FK_tblQuizQuestion_tblQuizVariant" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

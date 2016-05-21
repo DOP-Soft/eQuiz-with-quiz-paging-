@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h3>Choose your role</h3>
+
+<div>
+    <form action="@Url.Action("Index", "Account")" method="post">
+        <div>
+            <select name="role">
+                <option value="student">Student</option>
+                <option value="moderator">Moderator</option>                
+                <option value="admin">Admin</option>
+            </select>
+            <button type="submit" style="width:60px;">Go</button>
+        </div>
+    </form>
+</div>

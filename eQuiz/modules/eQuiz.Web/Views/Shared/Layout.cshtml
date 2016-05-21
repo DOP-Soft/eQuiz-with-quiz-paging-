@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>eQuiz</title>
+
+   <link href="~/Styles/equiz-temp.css" rel="stylesheet" />
+
+    @RenderSection("HeadStyles", false)
+
+    <script src="~/Scripts/libs/angularjs/angular.js"></script>
+    <script src="~/Scripts/libs/angularjs/angular-route.js"></script>
+    <script src="~/Scripts/app/shared/equiz.module.js"></script>
+
+    @RenderSection("HeadScripts", false)
+
+</head>
+<body ng-app="equizModule">
+    <header>
+        <h2>eQuiz</h2>        
+        <h4 ng-style="{ 'display' : 'block' }" style="display:none;color:green;">{{ "AngularJS is functional" }}</h4>
+        <h4 ng-style="{ 'display' : 'none' }"  style="display:block;color:red;">AngularJS is not functional</h4>
+    </header>
+    <section> 
+        @RenderBody()
+    </section>
+    <footer>
+
+    </footer>
+    @RenderSection("FootScripts", false)
+</body>
+</html>

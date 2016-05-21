@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section HeadStyles{
+    <link rel="stylesheet" href="~/Areas/Student/Styles/equiz-temp.css" />
+}
+
+@section HeadScripts{
+    <script src="~/Areas/Student/Scripts/routeConfig.js"></script>
+    <script src="~/Areas/Student/Scripts/dashboard.service.js"></script>
+    <script src="~/Areas/Student/Scripts/dashboard.controller.js"></script>
+    <script src="~/Areas/Student/Scripts/dashboard.pagination.directive.js"></script>
+    <script src="~/Areas/Student/Scripts/quizInRun.controller.js"></script>
+
+}
+
+<header>
+    <table id='headerTable'>
+        <tr>
+            <td id='Menu_td'><a href="#">Menu</a></td>
+            <td id='User_group_td'>User Group # <a href="#">FullName</a></td>
+        </tr>
+    </table>
+</header>
+<hr>
+<ng-view></ng-view>

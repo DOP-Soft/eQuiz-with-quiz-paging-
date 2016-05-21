@@ -1,0 +1,17 @@
+﻿<div>
+    <!--<input type="text" ng-model="page" />-->
+    <div ng-hide="(!pagesCount || pagesCount < 2)" style="display:inline">
+        <ul class="pagination">
+            <li><a href="#" ng-hide="page == 0" ng-href="#/" ng-click="search(0)"><<</a></li>
+            <li><a href="#" ng-hide="page == 0" ng-href="#/" ng-click="search(page-1)"><</a></li>
+            <li ng-repeat="n in range()" ng-class="{active: n == page}">
+                <a href="#" ng-href="#/" ng-click="search(n)" ng-if="n != page">{{n+1}}</a>
+                <a class="active" ng-if="n == page">{{n+1}}</a>
+            </li>
+            <li><a href="#" ng-hide="page == pagesCount - 1" ng-href="#/" ng-click="search(+page + 1)">></a></li>
+            <li><a href="#" ng-hide="page == pagesCount - 1" ng-href="#/" ng-click="search(pagesCount - 1)">>></a></li>
+        </ul>
+        <br>
+        <span>{{totalCount}} items found</span>
+    </div>
+</div>

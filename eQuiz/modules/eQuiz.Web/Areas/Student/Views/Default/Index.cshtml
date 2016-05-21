@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@section HeadStyles
+{
+    <link href="~/Areas/Student/Styles/equiz-temp.css" rel="stylesheet" />
+}
+
+<h2>Hello Student!!!</h2>
+
+<div>
+    <a href="@Url.Action("Index", "Home", new { area = "" })">Back Home</a>
+</div>

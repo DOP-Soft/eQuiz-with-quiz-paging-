@@ -1,0 +1,52 @@
+﻿<div>
+    <div>
+        <div id="timerContainer">
+            <span id="timer">{{quizDuration}}</span>
+        </div>
+        <nav id="quizNav">
+            <table>
+                <tr>
+                    <td class="navQuestions" ng-repeat="question in quizQuestions" ng-click="setCurrentQuestion($index)">{{$index + 1}}</td>
+                    <!--<td class="emptyTdInQuestNav" ng-repeat-end="">--------</td>-->
+                </tr>
+                <tr>
+                    <td ng-repeat="question in quizQuestions">Q{{$index + 1}}</td>
+                </tr>
+            </table>
+        </nav>
+
+        <div id="questAndAnswer">
+            <ul>
+                <li>
+                    <h2>{{quizQuestions[currentQuestion].Text}}</h2>
+                </li>
+                <li ng-repeat="answer in quizQuestions[currentQuestion].Answers" ng-if="quizQuestions[currentQuestion].IsAutomatic">
+                    <p>
+                        <input type="radio" name="answersGroup" > {{answer}}
+                    </p>
+                </li>  
+            </ul>
+            <textarea ng-if="!quizQuestions[currentQuestion].IsAutomatic"></textarea>
+        </div>
+    </div>
+
+    <footer id="quizButtons">
+        <table>
+            <tr>
+                <td>
+                    <input type="button" value="&laquo Previous" ng-click="setCurrentQuestion(currentQuestion - 1)">
+                </td>
+                <td class="empty"></td>
+                <td>
+                    <input type="button" value="Next &raquo" ng-click="setCurrentQuestion(currentQuestion + 1)">
+                </td>
+                <td class="empty"></td>
+                <td>
+                    <input type="button" value="Finish" onclick="alert('You have just finished the quizz!')">
+                </td>
+                <td class="empty"></td>
+            </tr>
+        </table>
+    </footer>
+</div>
+

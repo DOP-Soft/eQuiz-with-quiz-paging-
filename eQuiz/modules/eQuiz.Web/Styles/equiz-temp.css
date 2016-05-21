@@ -1,0 +1,27 @@
+﻿#loginContent {
+    text-align: center;
+}
+
+h1 {
+    font-family: sans-serif;
+}
+
+#loginTbl {
+    border-spacing: 5px;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+}
+
+#loginTbl td {
+    text-align: left;
+}
+
+#empty {
+    width: 15px;
+}
+
+.LoginBtn {
+    border: 2px solid black;
+    border-radius: 4px;
+}
